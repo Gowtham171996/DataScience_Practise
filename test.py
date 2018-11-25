@@ -1,13 +1,9 @@
 print("Execution started. \n Collecting the libraries required.")
 import os
 import warnings
-
-# Input data files are available in the "../input/" directory.
-# For example, running this (by clicking run or pressing Shift+Enter) will list the files in the input directory
 import matplotlib.pyplot as plt
 import numpy as np  # linear algebra
-import pandas as pd  # data processing, CSV file I/O (e.g. pd.read_csv)
-#init_notebook_mode(connected=True)
+import pandas as pd  
 import plotly.graph_objs as go
 import plotly.plotly as py
 import seaborn as sns
@@ -18,14 +14,9 @@ import plotly.offline as offline
 warnings.filterwarnings("ignore")
 
 print(os.listdir("../data visualization"))
-
 world = pd.read_csv("../data visualization/countries of the world.csv")
-
 print(world.head(10))
-
 print(world.info())
-#print(world.dtypes())
-
 
 #Cleaning the data
 world.columns = (["country","region","population","area","density","coastline","migration","infant_mortality","gdp","literacy","phones","arable","crops","other","climate","birthrate","deathrate","agriculture","industry","service"])
